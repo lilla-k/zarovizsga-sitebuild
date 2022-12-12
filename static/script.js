@@ -56,3 +56,14 @@ const beers = {
 	]
 }
 console.log(beers);
+
+const cardsContainerElement=document.getElementById("cards-container");
+beers.cards.map(card => {
+    const cardContainerElement = document.createElement("div");
+    cardContainerElement.setAttribute("class", "card-container");
+    cardsContainerElement.appendChild(cardContainerElement);
+    const titleElement = document.createElement("div");
+    cardContainerElement.appendChild(titleElement);
+    titleElement.setAttribute("class", "cards-title");
+    titleElement.textContent=card.title;
+})
