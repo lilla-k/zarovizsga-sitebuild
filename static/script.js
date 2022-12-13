@@ -4,11 +4,13 @@ const beers = {
 	button: "details",
 	cards: [
 		{
+			number:1,
 			title: "Mango Bay",
 			sub: "Mad Scientist Beer",
 			text: "Pale Ale - American"
 		},
 		{
+			number:2,
 			title: "Távoli Galaxis",
 			sub: "Rothbeer Brewery",
 			text: "IPA - American"
@@ -63,7 +65,29 @@ beers.cards.map(card => {
     cardContainerElement.setAttribute("class", "card-container");
     cardsContainerElement.appendChild(cardContainerElement);
     const titleElement = document.createElement("div");
+	const breakElement= document.createElement("hr");
+	const subElement=document.createElement("div");
+	const textElement=document.createElement("div");
+	const detailContainerElement=document.createElement("div");
+	const detailsElement = document.createElement("div");
+	const arrowElement = document.createElement("span");
+
     cardContainerElement.appendChild(titleElement);
+	cardContainerElement.appendChild(breakElement);
+	cardContainerElement.appendChild(subElement);
+	cardContainerElement.appendChild(textElement);
+	cardContainerElement.appendChild(detailContainerElement);
+	detailContainerElement.appendChild(detailsElement);
+	detailContainerElement.appendChild(arrowElement);
+
+	titleElement.textContent=card.title;
+	subElement.textContent=card.sub;
+	textElement.textContent=card.text;
+	detailsElement.textContent="details";
+	arrowElement.textContent="arrow_forward";
+	
+
     titleElement.setAttribute("class", "cards-title");
-    titleElement.textContent=card.title;
+    arrowElement.setAttribute("class", "material-symbols-outlined")
+	
 })
