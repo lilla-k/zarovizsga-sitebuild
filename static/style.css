@@ -37,9 +37,15 @@ header{
   'opsz' 48
 }
 
+span.size-36 {
+    font-size: 36px;
+  }
+
 #cards-container{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin: 50px 200px;
     gap: 60px;
     max-width: 1200px;
@@ -48,10 +54,62 @@ header{
     background-color: var(--secondary);
     height: 300px;
     width: 400px;
-    padding: 30px;
+    position: relative;
+    color: var(--primary);
 }
 
 .cards-title{
-    color: var(--primary);
     font-size: 36px;
+    margin: 40px;
+}
+
+hr{
+    margin: 0 40px;
+}
+
+.cards-sub{
+    font-size: 18px;
+    margin: 0 40px;
+}
+
+.cards-text{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 40px;
+}
+
+.cards-number{
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: var(--secondary);
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.cards-details-container{
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--secondary);
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+
+.cards-details-container:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }

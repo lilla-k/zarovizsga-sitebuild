@@ -4,13 +4,11 @@ const beers = {
 	button: "details",
 	cards: [
 		{
-			number:1,
 			title: "Mango Bay",
 			sub: "Mad Scientist Beer",
 			text: "Pale Ale - American"
 		},
 		{
-			number:2,
 			title: "Távoli Galaxis",
 			sub: "Rothbeer Brewery",
 			text: "IPA - American"
@@ -60,10 +58,11 @@ const beers = {
 console.log(beers);
 
 const cardsContainerElement=document.getElementById("cards-container");
-beers.cards.map(card => {
+beers.cards.map((card, index) => {
     const cardContainerElement = document.createElement("div");
     cardContainerElement.setAttribute("class", "card-container");
     cardsContainerElement.appendChild(cardContainerElement);
+	const numberElement = document.createElement("div");
     const titleElement = document.createElement("div");
 	const breakElement= document.createElement("hr");
 	const subElement=document.createElement("div");
@@ -71,23 +70,30 @@ beers.cards.map(card => {
 	const detailContainerElement=document.createElement("div");
 	const detailsElement = document.createElement("div");
 	const arrowElement = document.createElement("span");
+	const emptyElement = document.createElement("div");
 
+	cardContainerElement.appendChild(numberElement);
     cardContainerElement.appendChild(titleElement);
 	cardContainerElement.appendChild(breakElement);
 	cardContainerElement.appendChild(subElement);
 	cardContainerElement.appendChild(textElement);
 	cardContainerElement.appendChild(detailContainerElement);
+	detailContainerElement.appendChild(emptyElement);
 	detailContainerElement.appendChild(detailsElement);
 	detailContainerElement.appendChild(arrowElement);
 
+	numberElement.textContent=index+1;
 	titleElement.textContent=card.title;
 	subElement.textContent=card.sub;
 	textElement.textContent=card.text;
 	detailsElement.textContent="details";
 	arrowElement.textContent="arrow_forward";
 	
-
+	numberElement.setAttribute("class", "cards-number");
     titleElement.setAttribute("class", "cards-title");
-    arrowElement.setAttribute("class", "material-symbols-outlined")
+	subElement.setAttribute("class", "cards-sub");
+	textElement.setAttribute("class", "cards-text");
+	detailContainerElement.setAttribute("class", "cards-details-container");
+    arrowElement.setAttribute("class", "material-symbols-outlined");
 	
 })
