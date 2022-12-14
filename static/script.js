@@ -94,6 +94,6 @@ beers.cards.map((card, index) => {
 	subElement.setAttribute("class", "cards-sub");
 	textElement.setAttribute("class", "cards-text");
 	detailContainerElement.setAttribute("class", "cards-details-container");
-    arrowElement.setAttribute("class", "material-symbols-outlined");
+    arrowElement.setAttribute("class", "material-symbols-outlined size-36");
 	
 })

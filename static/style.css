@@ -37,7 +37,7 @@ header{
   'opsz' 48
 }
 
-span.size-36 {
+.material-symbols-outlined.size-36 {
     font-size: 36px;
   }
 
@@ -46,9 +46,9 @@ span.size-36 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 50px 200px;
-    gap: 60px;
+    margin: auto;
     max-width: 1200px;
+    gap: 60px;
 }
 .card-container{
     background-color: var(--secondary);
